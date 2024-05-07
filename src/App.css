@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+#root {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'DotGothic16', sans-serif;
+  background-color: var(--background-color);
+  transition: background-color 0.66s ease;
+  color: azure;
+  display: flex;
+  place-items: center;
+  align-items: center;
+  
+
+  display: flex;
+  
+  width: 100%;
+  
+  background-image: linear-gradient(0deg, #ccc 1px, transparent 1px),
+                    linear-gradient(90deg, #ccc 1px, transparent 1px);
+                    
+  background-size: 100px 100px;
+  background-position: 0 0, 0 0;
+  animation: moveGrid 10s linear infinite;
+}
+
+.nav-bar{
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.644);
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  color: white;
+  border: 1px solid #00000023;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px  #000;
+  padding: 3px;
+}
+
+.feature-buttons{
+  margin-left: auto;
+}
+
+.appearance-buttons{
+  margin-right: auto;
+}
+
+.main-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  
+  border: 2px solid black;
+  background-color: #35353d3b;
+  border-radius: 4px;
+  margin: 20px;
+  margin-top: 100px;
+  
+}
+
+.home-feed{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.like-icon:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+
+}
+
+.posts {
+  max-height: 80vh; 
+  overflow-y: auto;
+}
+
+.post{
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 0;
+  
+}
+
+.post a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.comments{
+  max-height: 40vh; 
+  overflow-y: auto;
+  justify-content: left;
+}
+
+@keyframes moveGrid {
+  0% { background-position: 0 0;}
+  100% { background-position: 100% 100%;}
+}
+
+@keyframes spiral {
+  0% {background-position: 0 0, 0 0;}
+  100% {background-position: 720px 720px, 720px 720px;}
+  
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+#image-preview{
+  border: 2px solid #0807074b;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px #000;
+  margin: 10px;
+  max-width: 756px;
+}
+
+.letter {
+  display: inline-block;
+  animation: wave 1.5s ease-in-out infinite;
+}
